@@ -1,0 +1,15 @@
+<tr>
+    <td><img ng-src="vendor/resources/img/{{::model.image}}" width="50" height="50" class="img-circle"></td>
+    <td>{{::model.title}}</td>
+    <td>{{::model.year}}</td>
+    <td>{{::model.band.name}}</td>
+    <td>{{::model.genre.name}}</td>
+    <td ng-repeat="track in model.tracklist">
+        <ul>
+             <li>
+              {{track}}
+            </li>
+        </ul>
+
+    </td>
+</tr>
