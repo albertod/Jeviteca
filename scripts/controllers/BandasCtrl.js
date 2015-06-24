@@ -3,4 +3,5 @@ angular
     .controller("BandasCtrl",["$scope","Bandas",function($scope,Bandas){
 
                 $scope.bandas = Bandas.data;
+
     }]);
