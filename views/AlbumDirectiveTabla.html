@@ -4,6 +4,15 @@
     <td>{{::model.year}}</td>
     <td>{{::model.band.name}}</td>
     <td>{{::model.genre.name}}</td>
+    <td>
+       <ul>
+           <li ng-hide="isLocalStorageEnable()"> Local Storage not enabled </li>
+           <!--<button ng-click="deleteFav()" ng-show="isFavorite()" class="glyphicon glyphicon-heart"></button>-->
+           <!--<button ng-click="setFav()" ng-hide="isFavorite()" class="glyphicon glyphicon-heart-empty"></button>-->
+           <button ng-click="markAs(!isFavorite)" ><i class="glyphicon" ng-class="{'glyphicon-heart' : isFavorite , 'glyphicon-heart-empty' : !isFavorite }"></i></button>
+       </ul>
+    </td>
+
     <td ng-repeat="track in model.tracklist">
         <ul>
              <li>
@@ -13,3 +22,4 @@
 
     </td>
 </tr>
+

@@ -3,12 +3,14 @@ angular.module( "jeviteca", ["ngRoute", "route-segment", "view-segment"] );
 
 angular
     .module( "jeviteca" )
-    .config(["$routeSegmentProvider", "$routeProvider", function( $routeSegmentProvider, $routeProvider ) {
+    .config(["$routeSegmentProvider", "$routeProvider",
+        function( $routeSegmentProvider, $routeProvider) {
 
         $routeSegmentProvider.when( "/albumes", "albumes");
         $routeSegmentProvider.when( "/bandas",  "bandas");
         $routeSegmentProvider.when( "/generos", "generos");
         //$routeSegmentProvider.when( "/peliculas/:id/detalles", "detalle_pelicula" )
+
 
         $routeSegmentProvider.segment( "albumes", {
             controller: "AlbumesCtrl",

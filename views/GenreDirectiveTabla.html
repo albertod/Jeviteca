@@ -1,3 +1,9 @@
 <tr>
     <td>{{::model.name}}</td>
+    <td>
+        <ul>
+            <li ng-hide="isLocalStorageEnable()"> Local Storage not enabled </li>
+            <button ng-click="markAs(!isFavorite)" ><i class="glyphicon" ng-class="{'glyphicon-heart' : isFavorite , 'glyphicon-heart-empty' : !isFavorite }"></i></button>
+        </ul>
+    </td>
 </tr>
